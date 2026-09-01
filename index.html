@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCREAMM Ice Cream — The Sound of True Flavour</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR WITH BLUR BACKGROUND ===================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <img src="assets/logo_brand.png" alt="SCREAMM Logo" class="nav-logo-img" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#flavors">Flavors</a></li>
+        <li><a href="#about">Our Story</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact" class="nav-cta">Find Us 📍</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===================== FLOATING FULL-BODY CARTOON MASCOT (LEO) ===================== -->
+  <div class="mascot-widget-wrapper" id="mascotWidget" title="Click Leo for a Sweet Surprise!">
+    
+    <!-- Speech Bubble -->
+    <div class="mascot-speech-bubble" id="mascotBubble">
+      <span class="bubble-text" id="bubbleText">Joy in Every Scoop! 🍦</span>
+      <span class="bubble-tail"></span>
+    </div>
+
+    <!-- Standalone Full-Body Character Structure (No Circle) -->
+    <div class="full-body-mascot-container">
+      
+      <!-- Ambient Shadow beneath feet -->
+      <div class="mascot-ground-shadow"></div>
+
+      <!-- Character Rig -->
+      <div class="mascot-character-rig">
+        
+        <!-- Head & Cap Layer -->
+        <div class="rig-head-group">
+          <div class="rig-cap-visor"></div>
+          <div class="rig-cap-crown"></div>
+          <div class="rig-hair"></div>
+          <div class="rig-head-base">
+            <div class="rig-eyes">
+              <span class="eye eye-left"></span>
+              <span class="eye eye-right"></span>
+            </div>
+            <div class="rig-cheeks">
+              <span class="ch-l"></span>
+              <span class="ch-r"></span>
+            </div>
+            <div class="rig-smile"></div>
+          </div>
+        </div>
+
+        <!-- Upper Body / Outfit -->
+        <div class="rig-torso-group">
+          <div class="rig-shirt-yellow"></div>
+          <div class="rig-overalls-red">
+            <div class="strap strap-l"></div>
+            <div class="strap strap-r"></div>
+            <div class="pocket-front"></div>
+          </div>
+        </div>
+
+        <!-- Arms & Hands -->
+        <div class="rig-arm arm-left-holding-ice">
+          <div class="hand-glove"></div>
+          <!-- Ice Cream Cone in Hand -->
+          <div class="held-ice-cream">
+            <div class="h-cherry">🍒</div>
+            <div class="h-scoop h-straw"></div>
+            <div class="h-scoop h-choco"></div>
+            <div class="h-cone"></div>
+          </div>
+        </div>
+
+        <div class="rig-arm arm-right-thumbs-up">
+          <div class="hand-thumbs-up">👍</div>
+        </div>
+
+        <!-- Legs & Feet for Walking Animation -->
+        <div class="rig-legs-group">
+          <div class="leg leg-left">
+            <div class="pant-leg"></div>
+            <div class="sneaker sneaker-l">👟</div>
+          </div>
+          <div class="leg leg-right">
+            <div class="pant-leg"></div>
+            <div class="sneaker sneaker-r">👟</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Action Floating Badge -->
+      <div class="mascot-action-badge">
+        <span>Click Me! 🍓</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ===================== FULLSCREEN CINEMATIC HERO SECTION ===================== -->
+  <section class="hero-fullscreen" id="hero">
+    
+    <!-- Background Video & Animated Visual Layer -->
+    <div class="hero-video-container">
+      <video class="hero-video" autoplay loop muted playsinline poster="assets/hero_bg.png" id="heroVideo">
+        <source src="assets/screamm_hero.mp4" type="video/mp4" />
+        <img src="assets/hero_bg.png" alt="SCREAMM Ice Cream Background" class="hero-video-fallback" />
+      </video>
+
+      <!-- Soft Dark Overlay with Blur Effect -->
+      <div class="hero-overlay"></div>
+
+      <!-- Animated Ambient Floating Particles -->
+      <div class="hero-particles" aria-hidden="true">
+        <div class="particle p-straw-1">🍓</div>
+        <div class="particle p-straw-2">🍓</div>
+        <div class="particle p-choco-1">🍫</div>
+        <div class="particle p-choco-2">🍫</div>
+        <div class="particle p-milk-1">🥛</div>
+        <div class="particle p-star-1">✨</div>
+        <div class="particle p-star-2">🌟</div>
+        <div class="particle p-scoop-1">🍦</div>
+      </div>
+    </div>
+
+    <!-- Hero Content Glass Overlay -->
+    <div class="hero-content-wrapper">
+      <div class="hero-glass-card">
+        
+        <!-- Grand Brand Logo -->
+        <div class="hero-brand-logo-container animate-pop">
+          <img src="assets/logo_brand.png" alt="SCREAMM Grand Logo" class="hero-grand-logo" />
+        </div>
+
+        <!-- Main Heading -->
+        <h1 class="hero-main-heading animate-slide-up">
+          <span class="heading-sub-tag">Welcome to Pure Bliss</span>
+          <span class="heading-title-main">The Sound of True Flavour</span>
+        </h1>
+
+        <!-- Subheading -->
+        <p class="hero-subheading animate-fade-in">
+          Joy in Every Scoop! Handcrafted with pure fresh cream, rich Belgian chocolate & sun-ripened berries.
+        </p>
+
+        <!-- Call to Action Buttons -->
+        <div class="hero-cta-group animate-fade-in">
+          <a href="#flavors" class="btn btn-hero-primary glass-btn">
+            <span>Explore Flavours</span>
+            <span class="btn-arrow">🍨</span>
+          </a>
+          <a href="#menu" class="btn btn-hero-secondary glass-btn">
+            <span>View Full Menu</span>
+            <span class="btn-arrow">📜</span>
+          </a>
+        </div>
+
+        <!-- Hero Stats Row -->
+        <div class="hero-quick-features">
+          <div class="feat-item">
+            <span class="feat-val">100%</span>
+            <span class="feat-lbl">Natural Cream</span>
+          </div>
+          <div class="feat-divider"></div>
+          <div class="feat-item">
+            <span class="feat-val">50+</span>
+            <span class="feat-lbl">Artisan Flavours</span>
+          </div>
+          <div class="feat-divider"></div>
+          <div class="feat-item">
+            <span class="feat-val">⭐ 4.9</span>
+            <span class="feat-lbl">Kids & Family Love</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Scroll Down Arrow -->
+    <a href="#flavors" class="hero-scroll-down" aria-label="Scroll to Flavors">
+      <span class="scroll-label">Scroll to Discover</span>
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+    </a>
+
+  </section>
+
+  <!-- ===================== MARQUEE STRIP ===================== -->
+  <div class="flavor-strip">
+    <div class="strip-track">
+      <span>🍦 Madagascar Vanilla</span>
+      <span>🍫 Dark Chocolate Fudge</span>
+      <span>🍓 Strawberry Fields</span>
+      <span>🥭 Alphonso Mango Dream</span>
+      <span>🫐 Blueberry Sky</span>
+      <span>🍑 Peach Fuzz Delight</span>
+      <span>🍪 Cookies & Cream</span>
+      <span>🌈 Rainbow Unicorn Swirl</span>
+      <span>🍦 Madagascar Vanilla</span>
+      <span>🍫 Dark Chocolate Fudge</span>
+      <span>🍓 Strawberry Fields</span>
+      <span>🥭 Alphonso Mango Dream</span>
+      <span>🫐 Blueberry Sky</span>
+      <span>🍑 Peach Fuzz Delight</span>
+      <span>🍪 Cookies & Cream</span>
+      <span>🌈 Rainbow Unicorn Swirl</span>
+    </div>
+  </div>
+
+  <!-- ===================== FLAVORS SECTION ===================== -->
+  <section class="flavors-section" id="flavors">
+    <div class="section-header">
+      <div class="section-tag">✨ Signature Collection</div>
+      <h2 class="section-title">Flavors That Make<br/><span class="choco-text">You SCREAMM</span></h2>
+      <p class="section-subtitle">Every flavor is a tiny masterpiece — freshly churned daily with the finest ingredients from around the world.</p>
+    </div>
+
+    <div class="flavors-grid">
+
+      <div class="flavor-card" data-flavor="vanilla">
+        <div class="flavor-card-bg vanilla-bg"></div>
+        <div class="flavor-emoji-art">
+          <div class="fa-scoop vanilla-scoop"></div>
+          <div class="fa-cone"></div>
+          <div class="fa-drip vanilla-drip"></div>
+        </div>
+        <div class="flavor-badge">Fan Favorite 💛</div>
+        <div class="flavor-info">
+          <h3>Madagascar Vanilla</h3>
+          <p>Pure, creamy bliss with real vanilla bean pods from Madagascar. The classic elevated.</p>
+          <div class="flavor-tags">
+            <span class="tag">Gluten Free</span>
+            <span class="tag">Kid Fave</span>
+          </div>
+          <div class="flavor-price">₹180 <span class="per">/ scoop</span></div>
+        </div>
+        <button class="flavor-btn">Add to Order 🛒</button>
+      </div>
+
+      <div class="flavor-card featured" data-flavor="choco">
+        <div class="flavor-card-bg choco-bg"></div>
+        <div class="featured-ribbon">⭐ Best Seller</div>
+        <div class="flavor-emoji-art">
+          <div class="fa-scoop choco-scoop"></div>
+          <div class="fa-cone choco-cone"></div>
+          <div class="fa-drip choco-drip"></div>
+        </div>
+        <div class="flavor-info">
+          <h3>Dark Chocolate Fudge</h3>
+          <p>Rich Belgian chocolate swirled with hot fudge ribbons and a hint of cocoa. Pure decadence.</p>
+          <div class="flavor-tags">
+            <span class="tag">Premium</span>
+            <span class="tag">Award Winner</span>
+          </div>
+          <div class="flavor-price">₹220 <span class="per">/ scoop</span></div>
+        </div>
+        <button class="flavor-btn choco-btn">Add to Order 🛒</button>
+      </div>
+
+      <div class="flavor-card" data-flavor="strawberry">
+        <div class="flavor-card-bg straw-bg"></div>
+        <div class="flavor-emoji-art">
+          <div class="fa-scoop straw-scoop"></div>
+          <div class="fa-cone"></div>
+          <div class="fa-drip straw-drip"></div>
+        </div>
+        <div class="flavor-badge">🍓 Kids' Choice</div>
+        <div class="flavor-info">
+          <h3>Strawberry Fields</h3>
+          <p>Sun-kissed strawberries blended into dreamy, fruity ice cream. Fresh, vibrant, and utterly delicious.</p>
+          <div class="flavor-tags">
+            <span class="tag">100% Fruit</span>
+            <span class="tag">Fresh Churn</span>
+          </div>
+          <div class="flavor-price">₹190 <span class="per">/ scoop</span></div>
+        </div>
+        <button class="flavor-btn straw-btn">Add to Order 🛒</button>
+      </div>
+
+      <div class="flavor-card" data-flavor="mango">
+        <div class="flavor-card-bg mango-bg"></div>
+        <div class="flavor-emoji-art">
+          <div class="fa-scoop mango-scoop"></div>
+          <div class="fa-cone"></div>
+          <div class="fa-drip mango-drip"></div>
+        </div>
+        <div class="flavor-badge">🥭 Summer Special</div>
+        <div class="flavor-info">
+          <h3>Alphonso Mango Dream</h3>
+          <p>The king of mangoes meets artisan ice cream. Thick, aromatic, tropical perfection in every bite.</p>
+          <div class="flavor-tags">
+            <span class="tag">Seasonal</span>
+            <span class="tag">Real Pulp</span>
+          </div>
+          <div class="flavor-price">₹200 <span class="per">/ scoop</span></div>
+        </div>
+        <button class="flavor-btn mango-btn">Add to Order 🛒</button>
+      </div>
+
+      <div class="flavor-card" data-flavor="cookie">
+        <div class="flavor-card-bg cookie-bg"></div>
+        <div class="flavor-emoji-art">
+          <div class="fa-scoop cookie-scoop"></div>
+          <div class="fa-cone"></div>
+          <div class="fa-drip cookie-drip"></div>
+        </div>
+        <div class="flavor-badge">🍪 New Crunch</div>
+        <div class="flavor-info">
+          <h3>Cookies & Cream</h3>
+          <p>Velvety vanilla base loaded with real crushed chocolate cookies and fudge swirl.</p>
+          <div class="flavor-tags">
+            <span class="tag">Party Fave</span>
+            <span class="tag">Extra Crunch</span>
+          </div>
+          <div class="flavor-price">₹210 <span class="per">/ scoop</span></div>
+        </div>
+        <button class="flavor-btn cookie-btn">Add to Order 🛒</button>
+      </div>
+
+      <div class="flavor-card" data-flavor="rainbow">
+        <div class="flavor-card-bg rainbow-bg"></div>
+        <div class="flavor-emoji-art">
+          <div class="fa-scoop rainbow-scoop"></div>
+          <div class="fa-cone"></div>
+          <div class="fa-drip rainbow-drip"></div>
+        </div>
+        <div class="flavor-badge">🌈 Magic Special</div>
+        <div class="flavor-info">
+          <h3>Rainbow Unicorn Swirl</h3>
+          <p>A magical blend of cotton candy, bubblegum, and vanilla with sprinkles of joy.</p>
+          <div class="flavor-tags">
+            <span class="tag">Kids Favorite</span>
+            <span class="tag">Fun Colors</span>
+          </div>
+          <div class="flavor-price">₹240 <span class="per">/ scoop</span></div>
+        </div>
+        <button class="flavor-btn rainbow-btn">Add to Order 🛒</button>
+      </div>
+
+    </div>
+
+    <div class="flavors-cta">
+      <p>Want to see all 50+ flavors?</p>
+      <a href="#menu" class="btn btn-primary">View Complete Menu 🍨</a>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT / STORY (WITH LEO ANIMATED SECTION) ===================== -->
+  <section class="about-section" id="about">
+    <div class="about-drip-top" aria-hidden="true"></div>
+    <div class="about-inner">
+      <div class="about-visual">
+        <div class="about-image-frame">
+          <div class="about-leo-animated-container">
+            <img src="assets/mascot_boy.png" alt="Leo SCREAMM Mascot" class="about-brand-art animated-leo-art" />
+            <div class="leo-flavor-sparkle">✨</div>
+            <div class="leo-glaze-shimmer"></div>
+          </div>
+          <div class="about-deco-bubbles">
+            <span class="deco-b b1">🍓</span>
+            <span class="deco-b b2">⭐</span>
+            <span class="deco-b b3">🍫</span>
+            <span class="deco-b b4">🌈</span>
+            <span class="deco-b b5">🍦</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <div class="section-tag">💕 Our Sweet Story</div>
+        <h2 class="section-title">Meet Leo &<br/><span class="pink-text">The SCREAMM Family</span></h2>
+        <p class="about-text">
+          Look at little Leo's smiling face as he enjoys his strawberry ice cream! That instant burst of joy — the kind that makes kids give a big thumbs-up and scream with delight — is what inspired our brand tagline: <em>"The Sound of True Flavour"</em>.
+        </p>
+        <p class="about-text">
+          At <strong>SCREAMM Ice Cream</strong>, every single scoop is crafted with <em>100% real dairy, fresh fruit pulps, and rich Belgian chocolate</em> to deliver pure happiness in every bite.
+        </p>
+        <div class="about-pillars">
+          <div class="pillar">
+            <div class="pillar-icon">🥛</div>
+            <div class="pillar-text">
+              <strong>100% Fresh Dairy</strong>
+              <span>No artificial fillers or preservatives</span>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🌿</div>
+            <div class="pillar-text">
+              <strong>Natural Ingredients</strong>
+              <span>Real fruit pulps & Belgian chocolate</span>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">❤️</div>
+            <div class="pillar-text">
+              <strong>Family Recipe</strong>
+              <span>Crafted in small, fresh batches</span>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">♻️</div>
+            <div class="pillar-text">
+              <strong>Eco-Friendly</strong>
+              <span>Biodegradable cups & waffle cones</span>
+            </div>
+          </div>
+        </div>
+        <a href="#experience" class="btn btn-primary">Discover The Experience 🎉</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCE SECTION ===================== -->
+  <section class="experience-section" id="experience">
+    <div class="section-header light">
+      <div class="section-tag light-tag">🎪 The SCREAMM World</div>
+      <h2 class="section-title light-title">More Than Ice Cream —<br/><span>It's an Unforgettable Experience</span></h2>
+    </div>
+
+    <div class="experience-grid">
+      <div class="exp-card">
+        <div class="exp-icon-wrap pink-wrap">
+          <span class="exp-icon">🍨</span>
+        </div>
+        <h3>Live Scoop Bar</h3>
+        <p>Step up to our interactive scoop bar with over 50 flavors. Mix, layer, and create your personalized ice cream cup or cone.</p>
+      </div>
+      <div class="exp-card">
+        <div class="exp-icon-wrap choco-wrap">
+          <span class="exp-icon">🍫</span>
+        </div>
+        <h3>Belgian Chocolate Waterfall</h3>
+        <p>Dip your cones, fresh waffles, or fruit sticks in our warm Belgian chocolate fountain for ultimate richness.</p>
+      </div>
+      <div class="exp-card">
+        <div class="exp-icon-wrap cream-wrap">
+          <span class="exp-icon">🎂</span>
+        </div>
+        <h3>Custom Ice Cream Cakes</h3>
+        <p>Hand-crafted ice cream cakes for birthdays, parties, and celebrations — tailored to your favorite flavor combinations.</p>
+      </div>
+      <div class="exp-card">
+        <div class="exp-icon-wrap peach-wrap">
+          <span class="exp-icon">🎨</span>
+        </div>
+        <h3>Kids DIY Sundae Studio</h3>
+        <p>A fun creative station where kids can build their dream sundae with sprinkles, fudge, marshmallows, and toppings!</p>
+      </div>
+      <div class="exp-card">
+        <div class="exp-icon-wrap pink-wrap">
+          <span class="exp-icon">🚐</span>
+        </div>
+        <h3>SCREAMM Party Truck</h3>
+        <p>Bring the joy directly to your doorstep! Book our cute ice cream truck for birthdays, school events, and weddings.</p>
+      </div>
+      <div class="exp-card">
+        <div class="exp-icon-wrap choco-wrap">
+          <span class="exp-icon">📦</span>
+        </div>
+        <h3>Super Chilled Delivery</h3>
+        <p>Order SCREAMM straight to your couch in insulated eco-packs that keep every scoop frozen and perfectly cream-soft.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FULL MENU ===================== -->
+  <section class="menu-section" id="menu">
+    <div class="section-header">
+      <div class="section-tag">🍧 Complete Menu</div>
+      <h2 class="section-title">Pick Your<br/><span class="choco-text">Happiness</span></h2>
+    </div>
+
+    <div class="menu-tabs">
+      <button class="menu-tab active" data-tab="scoops">Scoops & Cones</button>
+      <button class="menu-tab" data-tab="sundaes">Loaded Sundaes</button>
+      <button class="menu-tab" data-tab="shakes">Thick Shakes</button>
+      <button class="menu-tab" data-tab="specials">Cakes & Packs</button>
+    </div>
+
+    <div class="menu-panel active" id="tab-scoops">
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="menu-emoji">🍦</div>
+          <div class="menu-item-info">
+            <h4>Single Scoop Cone</h4>
+            <p>1 generous scoop in a crisp waffle cone</p>
+          </div>
+          <div class="menu-price">₹150</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-emoji">🍦</div>
+          <div class="menu-item-info">
+            <h4>Double Scoop Cone</h4>
+            <p>2 scoops of your choice — double happiness</p>
+          </div>
+          <div class="menu-price">₹250</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-emoji">🍦</div>
+          <div class="menu-item-info">
+            <h4>Triple Tower Cone</h4>
+            <p>3 massive scoops for true ice cream lovers</p>
+          </div>
+          <div class="menu-price">₹340</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-emoji">🧇</div>
+          <div class="menu-item-info">
+            <h4>Choco-Dipped Waffle Cone</h4>
+            <p>Fresh waffle cone dipped in chocolate & nuts</p>
+          </div>
+          <div class="menu-price">₹290</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-emoji">🥤</div>
+          <div class="menu-item-info">
+            <h4>Classic Scoop Cup</h4>
+            <p>Served in our eco-friendly paper cup</p>
+          </div>
+          <div class="menu-price">₹160</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-emoji">🍨</div>
+          <div class="menu-item-info">
+            <h4>Family Tub (500ml)</h4>
+            <p>Take-home tub packed with your favorite flavor</p>
+          </div>
+          <div class="menu-price">₹360</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-panel" id="tab-sundaes">
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="menu-emoji">🍨</div>
+          <div class="menu-item-info">
+            <h4>Classic Fudge Sundae</h4>
+            <p>2 vanilla scoops + hot Belgian fudge + cherry</p>
+          </div>
+          <div class="menu-price">₹320</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-emoji">🍓</div>
+          <div class="menu-item-info">
+            <h4>Strawberry Bliss Sundae</h4>
+            <p>Strawberry scoops + fresh berry compote + whipped cream</p>
+          </div>
+          <div class="menu-price">₹350</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-emoji">🍫</div>
+          <div class="menu-item-info">
+            <h4>Choco Volcano Explosion</h4>
+            <p>Dark choco scoops + molten lava fudge + brownie bits</p>
+          </div>
+          <div class="menu-price">₹420</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-emoji">🌈</div>
+          <div class="menu-item-info">
+            <h4>Rainbow Unicorn Sundae</h4>
+            <p>Unicorn swirl + cotton candy + rainbow sprinkles</p>
+          </div>
+          <div class="menu-price">₹380</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-emoji">🥭</div>
+          <div class="menu-item-info">
+            <h4>Tropical Mango Paradise</h4>
+            <p>Mango sorbet + coconut cream + caramel drizzle</p>
+          </div>
+          <div class="menu-price">₹390</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-emoji">🍪</div>
+          <div class="menu-item-info">
+            <h4>Cookie Monster Delight</h4>
+            <p>Cookies & cream + Oreo crumble + hot fudge</p>
+          </div>
+          <div class="menu-price">₹400</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-panel" id="tab-shakes">
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="menu-emoji">🥛</div>
+          <div class="menu-item-info">
+            <h4>Pure Vanilla Shake</h4>
+            <p>Thick Madagascar vanilla shake topped with whipped cream</p>
+          </div>
+          <div class="menu-price">₹280</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-emoji">🍫</div>
+          <div class="menu-item-info">
+            <h4>Belgian Choco Shake</h4>
+            <p>Rich dark chocolate + Nutella swirl + choco chips</p>
+          </div>
+          <div class="menu-price">₹320</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-emoji">🍓</div>
+          <div class="menu-item-info">
+            <h4>Strawberry Thickshake</h4>
+            <p>Real strawberry pulp blended with whole milk ice cream</p>
+          </div>
+          <div class="menu-price">₹300</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-emoji">🥭</div>
+          <div class="menu-item-info">
+            <h4>Alphonso Mango Shake</h4>
+            <p>Thick mango shake loaded with fresh mango chunks</p>
+          </div>
+          <div class="menu-price">₹310</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-emoji">🌈</div>
+          <div class="menu-item-info">
+            <h4>Unicorn Freakshake</h4>
+            <p>Over-the-top rainbow shake with cotton candy & donut</p>
+          </div>
+          <div class="menu-price">₹450</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-emoji">☕</div>
+          <div class="menu-item-info">
+            <h4>Cold Mocha Espresso Shake</h4>
+            <p>Espresso shot + coffee ice cream + cocoa dust</p>
+          </div>
+          <div class="menu-price">₹340</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-panel" id="tab-specials">
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="menu-emoji">🎂</div>
+          <div class="menu-item-info">
+            <h4>Signature Ice Cream Cake (500g)</h4>
+            <p>Layered ice cream cake with your choice of flavors</p>
+          </div>
+          <div class="menu-price">₹1,200</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-emoji">🎂</div>
+          <div class="menu-item-info">
+            <h4>Grand Celebration Cake (1kg)</h4>
+            <p>Multi-layered ice cream cake — serves 8 to 10 people</p>
+          </div>
+          <div class="menu-price">₹2,200</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-emoji">🍱</div>
+          <div class="menu-item-info">
+            <h4>SCREAMM Party Tub (10 Scoops)</h4>
+            <p>10 scoops packed in insulated party containers</p>
+          </div>
+          <div class="menu-price">₹1,400</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-emoji">🎉</div>
+          <div class="menu-item-info">
+            <h4>Kids Birthday Bundle</h4>
+            <p>Cake + 4 shakes + 10 ice cream cones + party hats</p>
+          </div>
+          <div class="menu-price">₹3,500</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-emoji">🚐</div>
+          <div class="menu-item-info">
+            <h4>SCREAMM Truck Booking</h4>
+            <p>2-hour live truck service at your event (up to 50 guests)</p>
+          </div>
+          <div class="menu-price">₹8,000</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-emoji">💎</div>
+          <div class="menu-item-info">
+            <h4>Artisan Gift Box</h4>
+            <p>4 handcrafted pints + toppings kit + golden scoop</p>
+          </div>
+          <div class="menu-price">₹2,800</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="section-header">
+      <div class="section-tag">💌 Family Reviews</div>
+      <h2 class="section-title">The Love for <span class="pink-text">SCREAMM</span></h2>
+    </div>
+
+    <div class="testimonials-slider">
+      <div class="testi-track" id="testiTrack">
+
+        <div class="testi-card">
+          <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testi-text">"My kids literally <strong>SCREAMM</strong> with joy every weekend when we pull up to their store. The Strawberry Fields flavor is pure perfection!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background: #FF6B8A;">S</div>
+            <div>
+              <strong>Sneha Kapoor</strong>
+              <span>Mother of 2 · Mumbai</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testi-text">"We booked the SCREAMM truck for my son's 7th birthday. It was the talk of the entire party! The Belgian Chocolate Waterfall was a huge hit."</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background: #C8651B;">R</div>
+            <div>
+              <strong>Rohit Verma</strong>
+              <span>Father of 2 · Delhi</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testi-text">"The Dark Chocolate Fudge is world-class. Rich, velvety, and not overly sweet. You can truly taste the quality of real cream!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background: #4A2C0A;">P</div>
+            <div>
+              <strong>Priya Nair</strong>
+              <span>Food Critic · Bangalore</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="slider-controls">
+        <button class="slider-btn prev" id="prevBtn" aria-label="Previous review">‹</button>
+        <div class="slider-dots" id="sliderDots"></div>
+        <button class="slider-btn next" id="nextBtn" aria-label="Next review">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GALLERY ===================== -->
+  <section class="gallery-section">
+    <div class="section-header">
+      <div class="section-tag">📸 Visual Treats</div>
+      <h2 class="section-title">Picture-Perfect <span class="choco-text">Deliciousness</span></h2>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item gi-1">
+        <div class="gallery-placeholder gp-choco">
+          <span class="gp-emoji">🍫</span>
+          <span class="gp-label">Belgian Chocolate Fudge</span>
+        </div>
+      </div>
+      <div class="gallery-item gi-2">
+        <div class="gallery-placeholder gp-straw">
+          <span class="gp-emoji">🍓</span>
+          <span class="gp-label">Fresh Strawberry Scoop</span>
+        </div>
+      </div>
+      <div class="gallery-item gi-3">
+        <div class="gallery-placeholder gp-rainbow">
+          <span class="gp-emoji">🌈</span>
+          <span class="gp-label">Rainbow Unicorn Swirl</span>
+        </div>
+      </div>
+      <div class="gallery-item gi-4">
+        <div class="gallery-placeholder gp-vanilla">
+          <span class="gp-emoji">🍦</span>
+          <span class="gp-label">Madagascar Vanilla Cone</span>
+        </div>
+      </div>
+      <div class="gallery-item gi-5">
+        <div class="gallery-placeholder gp-mango">
+          <span class="gp-emoji">🥭</span>
+          <span class="gp-label">Alphonso Mango Sorbet</span>
+        </div>
+      </div>
+      <div class="gallery-item gi-6">
+        <div class="gallery-placeholder gp-cookie">
+          <span class="gp-emoji">🍪</span>
+          <span class="gp-label">Cookies & Cream Loaded</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== NEWSLETTER ===================== -->
+  <section class="newsletter-section">
+    <div class="newsletter-inner">
+      <div class="nl-content">
+        <div class="section-tag">📩 Sweet Offers</div>
+        <h2>Get First Dibs on<br/>New SCREAMM Flavors!</h2>
+        <p>Subscribe to our newsletter for exclusive secret flavor drops, party discounts, and sweet surprises!</p>
+        <form class="nl-form" id="nlForm">
+          <input type="email" placeholder="Enter your email address 💌" required class="nl-input" id="nlEmail" />
+          <button type="submit" class="btn btn-primary">SCREAMM Me In! 🍨</button>
+        </form>
+        <div class="nl-success-msg" id="nlSuccess">🎉 Welcome to the SCREAMM family! Check your inbox for a sweet coupon code.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT / LOCATIONS ===================== -->
+  <section class="contact-section" id="contact">
+    <div class="section-header">
+      <div class="section-tag">📍 Store Locations</div>
+      <h2 class="section-title">Come <span class="pink-text">SCREAMM</span> With Us!</h2>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card location-card">
+        <div class="contact-icon">📍</div>
+        <h3>Visit Our Parlors</h3>
+        <div class="location-item">
+          <strong>SCREAMM Mumbai Flagship</strong>
+          <p>12 Marine Drive, Near Gateway, Mumbai — 400001</p>
+          <span class="open-badge">🟢 Open Today · 11:00 AM – 11:00 PM</span>
+        </div>
+        <div class="location-item">
+          <strong>SCREAMM Delhi</strong>
+          <p>Cyber Hub, DLF CyberCity, Gurugram — 122002</p>
+          <span class="open-badge">🟢 Open Today · 11:00 AM – 11:00 PM</span>
+        </div>
+        <div class="location-item">
+          <strong>SCREAMM Bangalore</strong>
+          <p>UB City Mall, Vittal Mallya Road — 560001</p>
+          <span class="open-badge">🟢 Open Today · 12:00 PM – 10:00 PM</span>
+        </div>
+      </div>
+
+      <div class="contact-card hours-card">
+        <div class="contact-icon">🕐</div>
+        <h3>Hours & Delivery</h3>
+        <div class="hours-row"><span>Monday – Friday</span><span>11:00 AM – 11:00 PM</span></div>
+        <div class="hours-row"><span>Saturday</span><span>10:00 AM – 12:00 AM</span></div>
+        <div class="hours-row"><span>Sunday</span><span>10:00 AM – 11:00 PM</span></div>
+        <div class="delivery-info">
+          <div class="delivery-icon">🚐</div>
+          <div>
+            <strong>Home Delivery Active</strong>
+            <p>Fast insulated delivery within 45 minutes.</p>
+          </div>
+        </div>
+        <div class="contact-cta">
+          <a href="tel:+918001234567" class="btn btn-primary small-btn">📞 Call Store</a>
+          <a href="mailto:hello@screamm.in" class="btn btn-secondary small-btn">✉️ Email Us</a>
+        </div>
+      </div>
+
+      <div class="contact-card party-card">
+        <div class="contact-icon">🎉</div>
+        <h3>Events & Catering</h3>
+        <p>Planning a birthday or corporate event? Book the official <strong>SCREAMM Truck</strong>!</p>
+        <ul class="party-features">
+          <li>✅ Live Ice Cream Truck Service</li>
+          <li>✅ Over 10+ Flavors Menu</li>
+          <li>✅ Custom Branded Cups & Spoons</li>
+          <li>✅ Free Birthday Cake Included</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Book Event 🎂</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-drip" aria-hidden="true"></div>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="assets/logo_brand.png" alt="SCREAMM Logo" class="footer-logo-img" />
+        </div>
+        <p class="footer-tagline">Every scoop a story. Every bite pure joy.<br/>Scream for more — <em>always!</em></p>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Menu</h4>
+        <a href="#flavors">Signature Flavors</a>
+        <a href="#menu">Scoops & Cones</a>
+        <a href="#menu">Sundaes</a>
+        <a href="#menu">Milkshakes</a>
+        <a href="#menu">Ice Cream Cakes</a>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Company</h4>
+        <a href="#about">Our Story</a>
+        <a href="#experience">The Experience</a>
+        <a href="#contact">Parlor Locations</a>
+        <a href="#contact">Franchise Info</a>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Support</h4>
+        <a href="#contact">Order Online</a>
+        <a href="#contact">Allergy Guide</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#contact">FAQs</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 SCREAMM Ice Cream Pvt. Ltd. All rights reserved. Handcrafted with ❤️</p>
+      <p class="footer-tags">🍦 Artisan · 🌿 100% Dairy · ❤️ Family-Friendly</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
