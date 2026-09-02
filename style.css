@@ -497,6 +497,39 @@ button {
   justify-content: space-between;
 }
 
+/* Left-side brand ownership text */
+.nav-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.nav-brand-label {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: rgba(74, 44, 10, 0.6);
+  text-transform: uppercase;
+}
+
+.nav-brand-name {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--color-pink-dark);
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.nav-brand-location {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-choco);
+  letter-spacing: 0.5px;
+}
+
 .nav-logo-img {
   height: 52px;
   max-width: 220px;
@@ -928,6 +961,7 @@ section { padding: 100px 32px; }
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }
+  .nav-brand-text { display: none; }
 
   /* Stack hero vertically on mobile */
   .hero-layout-wrapper {
