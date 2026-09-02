@@ -819,12 +819,82 @@ section { padding: 100px 32px; }
   margin-bottom: 24px;
 }
 
+/* ── Logo animation wrapper ── */
+.logo-anim-wrap {
+  position: relative;
+  display: inline-block;
+  /* Soft pulsing glow around the whole logo */
+  animation: logoGlowPulse 4s ease-in-out infinite;
+  border-radius: 12px;
+}
+
+/* ── The logo itself: float + breathe ── */
 .hero-grand-logo {
   max-width: 320px;
   width: 100%;
   height: auto;
   display: block;
-  filter: drop-shadow(0 6px 20px rgba(74, 44, 10, 0.18));
+  position: relative;
+  z-index: 1;
+  /* Float up/down + gentle zoom in/out */
+  animation: logoFloatBreathe 5s ease-in-out infinite;
+  /* Ensure image stays crisp */
+  image-rendering: high-quality;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform, filter;
+}
+
+/* ── Shimmer sweep overlay ── */
+.logo-shimmer-sweep {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: 8px;
+  pointer-events: none;
+  overflow: hidden;
+  /* Diagonal light streak */
+  background: linear-gradient(
+    105deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.55) 48%,
+    rgba(255, 255, 255, 0.75) 50%,
+    rgba(255, 255, 255, 0.55) 52%,
+    transparent 70%
+  );
+  background-size: 250% 100%;
+  background-position: -200% center;
+  /* Sweep every 5 s, pause 3 s between sweeps */
+  animation: logoShimmerSweep 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  mix-blend-mode: soft-light;
+}
+
+/* ── Keyframes ── */
+
+/* Float up/down with gentle scale breath */
+@keyframes logoFloatBreathe {
+  0%   { transform: translateY(0px)   scale(1);     filter: drop-shadow(0 6px 20px rgba(74,44,10,0.18)); }
+  20%  { transform: translateY(-9px)  scale(1.018); filter: drop-shadow(0 14px 28px rgba(74,44,10,0.22)); }
+  40%  { transform: translateY(-5px)  scale(1.010); filter: drop-shadow(0 10px 24px rgba(74,44,10,0.20)); }
+  60%  { transform: translateY(-11px) scale(1.022); filter: drop-shadow(0 16px 30px rgba(74,44,10,0.24)); }
+  80%  { transform: translateY(-4px)  scale(1.008); filter: drop-shadow(0 8px 22px rgba(74,44,10,0.19)); }
+  100% { transform: translateY(0px)   scale(1);     filter: drop-shadow(0 6px 20px rgba(74,44,10,0.18)); }
+}
+
+/* Wrapper glow: soft pink → warm cream pulse */
+@keyframes logoGlowPulse {
+  0%, 100% { filter: drop-shadow(0 0  0px rgba(255,107,138,0));   }
+  30%       { filter: drop-shadow(0 0 18px rgba(255,107,138,0.28)); }
+  60%       { filter: drop-shadow(0 0 26px rgba(255,199, 44,0.22)); }
+  85%       { filter: drop-shadow(0 0 14px rgba(255,107,138,0.18)); }
+}
+
+/* Diagonal shimmer that sweeps left-to-right, then pauses */
+@keyframes logoShimmerSweep {
+  0%   { background-position: -200% center; opacity: 0; }
+  10%  { opacity: 1; }
+  50%  { background-position:  200% center; opacity: 0; }
+  100% { background-position:  200% center; opacity: 0; }
 }
 
 .hero-main-heading {
