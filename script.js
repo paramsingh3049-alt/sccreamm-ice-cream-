@@ -103,8 +103,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.getElementById('navLinks');
 
   if (hamburger && navLinks) {
+    const navbar = document.getElementById('navbar');
     hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('mobile-active');
+      hamburger.classList.toggle('mobile-active');
+      if (navbar) navbar.classList.toggle('mobile-active');
     });
   }
 
