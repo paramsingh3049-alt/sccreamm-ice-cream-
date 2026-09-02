@@ -13,9 +13,6 @@
   <!-- ===================== NAVBAR WITH BLUR BACKGROUND ===================== -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo">
-        <img src="assets/logo_brand.png" alt="SCREAMM Logo" class="nav-logo-img" />
-      </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#flavors">Flavors</a></li>
         <li><a href="#about">Our Story</a></li>
@@ -30,123 +27,31 @@
     </div>
   </nav>
 
-  <!-- ===================== FLOATING FULL-BODY CARTOON MASCOT (LEO) ===================== -->
-  <div class="mascot-widget-wrapper" id="mascotWidget" title="Click Leo for a Sweet Surprise!">
-    
-    <!-- Speech Bubble -->
-    <div class="mascot-speech-bubble" id="mascotBubble">
-      <span class="bubble-text" id="bubbleText">Joy in Every Scoop! 🍦</span>
-      <span class="bubble-tail"></span>
-    </div>
-
-    <!-- Standalone Full-Body Character Structure (No Circle) -->
-    <div class="full-body-mascot-container">
-      
-      <!-- Ambient Shadow beneath feet -->
-      <div class="mascot-ground-shadow"></div>
-
-      <!-- Character Rig -->
-      <div class="mascot-character-rig">
-        
-        <!-- Head & Cap Layer -->
-        <div class="rig-head-group">
-          <div class="rig-cap-visor"></div>
-          <div class="rig-cap-crown"></div>
-          <div class="rig-hair"></div>
-          <div class="rig-head-base">
-            <div class="rig-eyes">
-              <span class="eye eye-left"></span>
-              <span class="eye eye-right"></span>
-            </div>
-            <div class="rig-cheeks">
-              <span class="ch-l"></span>
-              <span class="ch-r"></span>
-            </div>
-            <div class="rig-smile"></div>
-          </div>
-        </div>
-
-        <!-- Upper Body / Outfit -->
-        <div class="rig-torso-group">
-          <div class="rig-shirt-yellow"></div>
-          <div class="rig-overalls-red">
-            <div class="strap strap-l"></div>
-            <div class="strap strap-r"></div>
-            <div class="pocket-front"></div>
-          </div>
-        </div>
-
-        <!-- Arms & Hands -->
-        <div class="rig-arm arm-left-holding-ice">
-          <div class="hand-glove"></div>
-          <!-- Ice Cream Cone in Hand -->
-          <div class="held-ice-cream">
-            <div class="h-cherry">🍒</div>
-            <div class="h-scoop h-straw"></div>
-            <div class="h-scoop h-choco"></div>
-            <div class="h-cone"></div>
-          </div>
-        </div>
-
-        <div class="rig-arm arm-right-thumbs-up">
-          <div class="hand-thumbs-up">👍</div>
-        </div>
-
-        <!-- Legs & Feet for Walking Animation -->
-        <div class="rig-legs-group">
-          <div class="leg leg-left">
-            <div class="pant-leg"></div>
-            <div class="sneaker sneaker-l">👟</div>
-          </div>
-          <div class="leg leg-right">
-            <div class="pant-leg"></div>
-            <div class="sneaker sneaker-r">👟</div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Action Floating Badge -->
-      <div class="mascot-action-badge">
-        <span>Click Me! 🍓</span>
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- ===================== FULLSCREEN CINEMATIC HERO SECTION ===================== -->
+  <!-- ===================== FULLSCREEN HERO SECTION ===================== -->
   <section class="hero-fullscreen" id="hero">
-    
-    <!-- Background Video & Animated Visual Layer -->
-    <div class="hero-video-container">
-      <video class="hero-video" autoplay loop muted playsinline poster="assets/hero_bg.png" id="heroVideo">
-        <source src="assets/screamm_hero.mp4" type="video/mp4" />
-        <img src="assets/hero_bg.png" alt="SCREAMM Ice Cream Background" class="hero-video-fallback" />
-      </video>
 
-      <!-- Soft Dark Overlay with Blur Effect -->
-      <div class="hero-overlay"></div>
+    <!-- Clean Gradient Background (no video/image) -->
+    <div class="hero-bg-clean" aria-hidden="true"></div>
 
-      <!-- Animated Ambient Floating Particles -->
-      <div class="hero-particles" aria-hidden="true">
-        <div class="particle p-straw-1">🍓</div>
-        <div class="particle p-straw-2">🍓</div>
-        <div class="particle p-choco-1">🍫</div>
-        <div class="particle p-choco-2">🍫</div>
-        <div class="particle p-milk-1">🥛</div>
-        <div class="particle p-star-1">✨</div>
-        <div class="particle p-star-2">🌟</div>
-        <div class="particle p-scoop-1">🍦</div>
-      </div>
+    <!-- Floating ambient emoji particles -->
+    <div class="hero-particles" aria-hidden="true">
+      <div class="particle p-straw-1">🍓</div>
+      <div class="particle p-straw-2">🍓</div>
+      <div class="particle p-choco-1">🍫</div>
+      <div class="particle p-choco-2">🍫</div>
+      <div class="particle p-star-1">✨</div>
+      <div class="particle p-star-2">🌟</div>
+      <div class="particle p-scoop-1">🍦</div>
     </div>
 
-    <!-- Hero Content Glass Overlay -->
-    <div class="hero-content-wrapper">
-      <div class="hero-glass-card">
-        
-        <!-- Grand Brand Logo -->
-        <div class="hero-brand-logo-container animate-pop">
+    <!-- Hero Two-Column Layout -->
+    <div class="hero-layout-wrapper">
+
+      <!-- LEFT / CENTER: Content + Logo -->
+      <div class="hero-content-col animate-pop">
+
+        <!-- Grand Brand Logo — CENTERED -->
+        <div class="hero-brand-logo-container">
           <img src="assets/logo_brand.png" alt="SCREAMM Grand Logo" class="hero-grand-logo" />
         </div>
 
@@ -158,7 +63,7 @@
 
         <!-- Subheading -->
         <p class="hero-subheading animate-fade-in">
-          Joy in Every Scoop! Handcrafted with pure fresh cream, rich Belgian chocolate & sun-ripened berries.
+          Joy in Every Scoop! Handcrafted with pure fresh cream, rich Belgian chocolate &amp; sun-ripened berries.
         </p>
 
         <!-- Call to Action Buttons -->
@@ -187,11 +92,17 @@
           <div class="feat-divider"></div>
           <div class="feat-item">
             <span class="feat-val">⭐ 4.9</span>
-            <span class="feat-lbl">Kids & Family Love</span>
+            <span class="feat-lbl">Kids &amp; Family Love</span>
           </div>
         </div>
 
       </div>
+
+      <!-- RIGHT: New mascot photo -->
+      <div class="hero-mascot-col animate-pop">
+        <img src="assets/new_mascot.png" alt="SCREAMM Ice Cream Mascot" class="hero-mascot-img" />
+      </div>
+
     </div>
 
     <!-- Scroll Down Arrow -->

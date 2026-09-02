@@ -718,9 +718,209 @@ section { padding: 100px 32px; }
 @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
+/* ==========================================================================
+   NEW HERO LAYOUT — Clean Background + Two-Column + Mascot Image
+   ========================================================================== */
+
+/* Clean gradient background replacing video */
+.hero-bg-clean {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 1;
+  background: linear-gradient(
+    145deg,
+    #FFE5D9 0%,
+    #FFF5EB 30%,
+    #FFE0E6 60%,
+    #FFF9F2 100%
+  );
+}
+
+/* Soft radial glow blobs for premium feel */
+.hero-bg-clean::before {
+  content: '';
+  position: absolute;
+  top: -20%; left: -10%;
+  width: 60%; height: 80%;
+  background: radial-gradient(circle, rgba(255, 107, 138, 0.2) 0%, transparent 65%);
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+.hero-bg-clean::after {
+  content: '';
+  position: absolute;
+  bottom: -20%; right: -10%;
+  width: 60%; height: 80%;
+  background: radial-gradient(circle, rgba(255, 199, 44, 0.18) 0%, transparent 65%);
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+/* Two-column hero layout */
+.hero-layout-wrapper {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+/* Content column */
+.hero-content-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0;
+}
+
+.hero-brand-logo-container {
+  margin-bottom: 24px;
+}
+
+.hero-grand-logo {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 6px 20px rgba(74, 44, 10, 0.18));
+}
+
+.hero-main-heading {
+  margin-bottom: 16px;
+  color: var(--color-choco);
+}
+
+.heading-sub-tag {
+  display: block;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--color-pink);
+  margin-bottom: 6px;
+}
+
+.heading-title-main {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 3.6rem;
+  line-height: 1.1;
+  color: var(--color-choco);
+  text-shadow: none;
+}
+
+.hero-subheading {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  margin: 0 0 28px;
+  max-width: 540px;
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.glass-btn {
+  padding: 15px 32px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  border-radius: var(--radius-pill);
+}
+
+.btn-hero-primary {
+  background: linear-gradient(135deg, var(--color-pink) 0%, var(--color-pink-dark) 100%);
+  color: #FFFFFF;
+  box-shadow: 0 8px 24px rgba(255, 107, 138, 0.4);
+}
+
+.btn-hero-secondary {
+  background: rgba(74, 44, 10, 0.08);
+  color: var(--color-choco);
+  border: 2px solid rgba(74, 44, 10, 0.15);
+}
+
+.btn-hero-secondary:hover {
+  background: rgba(74, 44, 10, 0.14);
+}
+
+.hero-quick-features {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(74, 44, 10, 0.12);
+}
+
+.feat-item { display: flex; flex-direction: column; }
+.feat-val { font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-gold); }
+.feat-lbl { font-size: 0.82rem; font-weight: 700; color: var(--color-text-muted); }
+.feat-divider { width: 1px; height: 30px; background: rgba(74, 44, 10, 0.15); }
+
+/* Mascot image column */
+.hero-mascot-col {
+  flex: 0 0 auto;
+  width: 480px;
+  max-width: 45%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.hero-mascot-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: var(--radius-lg);
+  filter: drop-shadow(0 20px 40px rgba(74, 44, 10, 0.2));
+  animation: mascotFloat 4s ease-in-out infinite alternate;
+}
+
+@keyframes mascotFloat {
+  0%   { transform: translateY(0px); }
+  100% { transform: translateY(-14px); }
+}
+
+/* Scroll down — visible on light background */
+.hero-scroll-down {
+  color: var(--color-choco);
+}
+
+.scroll-label { color: var(--color-text-muted); }
+.scroll-mouse { border-color: rgba(74, 44, 10, 0.5); }
+
+/* Hide old video / glass card styles that are no longer used */
+.hero-video-container,
+.hero-video,
+.hero-video-fallback,
+.hero-overlay,
+.hero-content-wrapper,
+.hero-glass-card,
+.mascot-widget-wrapper {
+  display: none !important;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
 @media (max-width: 1024px) {
-  .heading-title-main { font-size: 3.2rem; }
-  .hero-glass-card { padding: 36px 24px; }
+  .heading-title-main { font-size: 3rem; }
+  .hero-mascot-col { width: 380px; }
+  .hero-layout-wrapper { gap: 32px; padding: 0 28px; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
   .about-inner { grid-template-columns: 1fr; }
 }
@@ -728,12 +928,33 @@ section { padding: 100px 32px; }
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }
-  .heading-title-main { font-size: 2.5rem; }
-  .hero-subheading { font-size: 1.1rem; }
-  .hero-cta-group { flex-direction: column; }
+
+  /* Stack hero vertically on mobile */
+  .hero-layout-wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px 40px;
+    gap: 28px;
+  }
+
+  .hero-content-col {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-brand-logo-container { margin-bottom: 16px; }
+  .hero-grand-logo { max-width: 280px; }
+  .heading-title-main { font-size: 2.4rem; }
+  .hero-subheading { font-size: 1rem; max-width: 100%; }
+  .hero-cta-group { flex-direction: column; align-items: center; }
   .hero-quick-features { flex-direction: column; gap: 12px; }
+
+  .hero-mascot-col {
+    width: 80%;
+    max-width: 320px;
+  }
+
   .footer-inner { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
-  .mascot-widget-wrapper { bottom: 20px; right: 20px; }
-  .full-body-mascot-container { width: 110px; height: 170px; }
 }
