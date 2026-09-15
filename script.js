@@ -109,6 +109,15 @@ document.addEventListener('DOMContentLoaded', () => {
       hamburger.classList.toggle('mobile-active');
       if (navbar) navbar.classList.toggle('mobile-active');
     });
+
+    // Close mobile menu when a navigation link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('mobile-active');
+        hamburger.classList.remove('mobile-active');
+        if (navbar) navbar.classList.remove('mobile-active');
+      });
+    });
   }
 
   /* ==========================================================================
