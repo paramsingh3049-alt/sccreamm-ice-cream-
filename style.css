@@ -683,7 +683,20 @@ button {
 .scroll-mouse { width: 26px; height: 42px; border: 2px solid rgba(255, 255, 255, 0.8); border-radius: 15px; position: relative; display: flex; justify-content: center; }
 .scroll-wheel { width: 4px; height: 8px; background: var(--color-pink); border-radius: 2px; position: absolute; top: 8px; animation: scrollWheel 1.8s infinite ease-in-out; }
 
-.footer-logo-img { height: 70px; max-width: 280px; width: 100%; object-fit: contain; }
+.footer-logo-img {
+  height: auto;
+  max-width: 200px;
+  width: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: var(--radius-pill);
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.35));
+  transition: transform 0.3s ease;
+}
+
+.footer-logo-img:hover {
+  transform: scale(1.04);
+}
 
 .flavor-strip { background: var(--color-choco); color: #FFFFFF; padding: 18px 0; overflow: hidden; white-space: nowrap; }
 .strip-track { display: inline-block; animation: marquee 25s linear infinite; font-family: var(--font-heading); font-size: 1.3rem; }
@@ -822,20 +835,24 @@ section { padding: 100px 32px; }
 /* ── Logo animation wrapper ── */
 .logo-anim-wrap {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   /* Soft pulsing glow around the whole logo */
   animation: logoGlowPulse 4s ease-in-out infinite;
-  border-radius: 12px;
+  border-radius: var(--radius-pill);
 }
 
 /* ── The logo itself: float + breathe ── */
 .hero-grand-logo {
-  max-width: 320px;
+  max-width: 330px;
   width: 100%;
   height: auto;
   display: block;
   position: relative;
   z-index: 1;
+  object-fit: contain;
+  border-radius: var(--radius-pill);
   /* Float up/down + gentle zoom in/out */
   animation: logoFloatBreathe 5s ease-in-out infinite;
   /* Ensure image stays crisp */
@@ -850,16 +867,16 @@ section { padding: 100px 32px; }
   position: absolute;
   inset: 0;
   z-index: 2;
-  border-radius: 8px;
+  border-radius: var(--radius-pill);
   pointer-events: none;
   overflow: hidden;
   /* Diagonal light streak */
   background: linear-gradient(
     105deg,
     transparent 30%,
-    rgba(255, 255, 255, 0.55) 48%,
-    rgba(255, 255, 255, 0.75) 50%,
-    rgba(255, 255, 255, 0.55) 52%,
+    rgba(255, 255, 255, 0.45) 48%,
+    rgba(255, 255, 255, 0.65) 50%,
+    rgba(255, 255, 255, 0.45) 52%,
     transparent 70%
   );
   background-size: 250% 100%;
@@ -1243,7 +1260,8 @@ section { padding: 100px 32px; }
     max-width: 240px !important;
     width: 100% !important;
     height: auto !important;
-    object-fit: contain;
+    object-fit: contain !important;
+    border-radius: var(--radius-pill) !important;
     margin: 0 auto;
   }
 
@@ -1797,8 +1815,10 @@ section { padding: 100px 32px; }
   }
 
   .footer-logo-img {
-    max-width: 200px !important;
+    max-width: 180px !important;
     height: auto !important;
+    object-fit: contain !important;
+    border-radius: var(--radius-pill) !important;
     margin: 0 auto 12px !important;
   }
 
@@ -1849,7 +1869,8 @@ section { padding: 100px 32px; }
   }
 
   .hero-grand-logo {
-    max-width: 200px !important;
+    max-width: 190px !important;
+    border-radius: var(--radius-pill) !important;
   }
 
   .hero-mascot-col {
